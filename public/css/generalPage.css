@@ -107,3 +107,17 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
     top: 25%;
     left: -50%;
 }
+
+
+@media screen and (max-width:415px){
+    .cronograma-container{
+       margin-top: 15em;
+    }
+    
+}
+
+@media screen and (max-width:360px){
+    .cronograma-container{
+        margin-top: 5em;
+     }
+}
