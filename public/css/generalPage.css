@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3/09/2020, 04:43:55 PM
+    Author     : Process
+*/
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../webfonts/JosefinSans-Bold.ttf");
+}
+html, body {
+    color: #636b6f;
+    font-family: "Josefin Sans";
+    src: url("../webfonts/JosefinSans-Bold.ttf");
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    font-size:13px;
+}
+a{color:#333333;}
+ul{
+    display: inline-block;
+}
+ul li {
+    width:250px;
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
+    display: inline-block;
+    border-radius:0.5em;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contentopcion{
+    padding:10px;
+    background-color: white;
+    border-radius:0.5em;
+}
+
+.IconosMins{
+    height: 40px;
+}
+.UbicationCe{
+    position:absolute;
+    top:40%;
+    padding-left:10%;
+    padding-right: 10%;
+}
+.Ubication{
+    position:absolute;
+    top:25%;
+    padding-left:5%;
+    padding-right: 5%;
+}
+.IconosNormal{
+    height: 90px;
+}
+.listSpace{
+    padding:5px;
+    background-color:none;
+}
+.Ubication2{
+    position:absolute;
+    top:55%;
+    padding-left:5%;
+    padding-right: 5%;
+}
+.Titulos{
+    color:#F16A22;
+    font-size:16px;
+}
+.DivCerti{
+    width:130px;
+    padding:5px;
+    border-radius:0.5em;
+    -webkit-box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+-moz-box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+}
+.Sombra{
+    -webkit-box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+-moz-box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
+}
+
+
+.Talleres{
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 28px;
+    height: auto;
+    width: 1000px;
+    padding:5px;
+    padding-top:20px;
+    opacity: 0.8;
+}
+
+.Play{
+        position: relative;
+    top: 25%;
+    left: -50%;
+}
