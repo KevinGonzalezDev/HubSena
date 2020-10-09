@@ -4,7 +4,7 @@
         <style>
             body{
                 background-image:url('../image/MASTER_BK.png');
-                background-repeat: no-repeat;
+                background-repeat: repeat-y;
                 background-size: cover;
             }
         </style>
@@ -66,7 +66,7 @@
                 </tr>
 			@endif
             </table>
-			<table width ='100%'>
+			<table width ='100%' class="cronograma-container">
                 <tr>
                     <td style = 'padding-left:5%;'>
                         <p style = 'font-weight: bold;color:#33333382;'>Cronograma /</p>
