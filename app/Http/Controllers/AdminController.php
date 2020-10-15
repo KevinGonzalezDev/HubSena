@@ -462,11 +462,8 @@ class AdminController extends Controller{
                 . "where estado = 1 "
                 . "and id = $id");
         $s = DB::SELECT("SELECT "
-                . "id, nombre, fechas, horario, link, plataforma "
-                . "from detalle_talleres "
-                . "where idtaller = $id "
-                . "and ((fecha_cierre > now()) or (fecha_cierre is null) )"
-                . " order by orden ");
+                . "id, nombre, fechas, horario, link, plataforma , fecha_cierre "
+                . "from detalle_talleres where idtaller = $id order by orden");
 		$master = DB::SELECT("SELECT * from videosmaster where idcurso = $id");
         $datos = [
             'info'=>$da,
@@ -483,9 +480,8 @@ class AdminController extends Controller{
                 . "where estado = 1 "
                 . "and id = $id");
         $s = DB::SELECT("SELECT "
-                . "id, nombre, fechas, horario, link, plataforma "
-                . "from detalle_talleres where idtaller = $id "
-                . "and ((fecha_cierre > now()) or (fecha_cierre is null)) order by orden ");
+                . "id, nombre, fechas, horario, link, plataforma, fecha_cierre "
+                . "from detalle_talleres where idtaller = $id");
 		$master = DB::SELECT("SELECT * from videosmaster where idcurso = $id");
         $datos = [
             'info'=>$da,

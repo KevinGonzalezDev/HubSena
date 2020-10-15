@@ -143,11 +143,20 @@
                                                     {{$d->horario}}
                                                 </td>
                                             </tr>
+
+                                            @if( $d->fecha_cierre < date("Y-m-d") )
+                                            <tr>
+                                                <td colspan = '2'style = 'color:#d14221;font-size:11px;'>
+                                                    <a style = 'color:#d14221;font-size:11px;' target = '_blank'>Este evento ya no esta disponible</a>
+                                                </td>
+                                            </tr>
+                                            @else
                                             <tr>
                                                 <td colspan = '2'style = 'color:#2ABDC4;font-size:11px;'>
                                                     <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Participa en este evento haciendo clic acá</a>
                                                 </td>
                                             </tr>
+                                            @endif
                                         </table>
 										@endif
                                     </div>
