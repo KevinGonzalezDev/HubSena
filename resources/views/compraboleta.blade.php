@@ -8,7 +8,7 @@
                 background-size: cover;
             }
         </style>
-        
+
         <div class = ' Ubication' >
             <table width ='100%'>
                 @if( count($datos['master']) > 0 )
@@ -24,7 +24,7 @@
 							<p class = 'SizeText'style = 'text-align:justify;'>Al final de la jornada se entrega adicionalmente en un pdf que le permite repasar el cómo y cuándo deben utilizarse con otra idea u otro proceso en el que las quiera implementar.
 							</p>
 						@endif
-                        
+
 						@if($datos['id'] == 2)
 							<p class = 'SizeText'style = 'text-align:justify;'>Es un campo de entrenamiento virtual orientado a emprendedores o personas que quieran serlo,  diseñado para acoplar soluciones de los emprendedores y asistentes con las necesidades de un sector específico o eje temático del Bootcamp previamente establecido.</p>
 
@@ -35,7 +35,7 @@
 							<p class = 'SizeText'style = 'text-align:justify;'>Al final de la jornada se entrega adicionalmente en un pdf que le permite repasar el cómo y cuándo deben utilizarse con otra idea u otro proceso en el que las quiera implementar.
 														</p>
 						@endif
-						
+
 						<p style = 'width:800px;text-align:justify;'>Para poder inscribirte a nuestros talleres debes ver los videos de nuestra Máster Class.</p>
                     </td>
                 </tr>
@@ -81,7 +81,7 @@
                 <tr>
                     <td style = 'padding-left:5%;'>
                         @if( $datos['info'][0]->certificado == 1 )
-							
+
                         <div class = 'DivCerti'>
                             <table width ='100%'>
                                 <tr>
@@ -91,7 +91,7 @@
                                     <td style = 'text-align:Center;color:#2ABDC4;'>Certificado</td>
                                 </tr>
                             </table>
-                            
+
                         </div>
                         @endif
                         <br><br>
@@ -145,7 +145,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan = '2'style = 'color:#2ABDC4;font-size:11px;'>
-                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Registrate aquí</a>
+                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Participa en este evento haciendo clic acá</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -159,9 +159,9 @@
             </table>
         </div>
         <div class = 'flex-center Ubication2'>
-            
+
         </div>
-        
+
     <script>
         $(document).ready(function () {
 

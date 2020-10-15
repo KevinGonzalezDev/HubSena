@@ -8,7 +8,7 @@
                 background-size: cover;
             }
         </style>
-        
+
         <div class = ' Ubication'>
             <table width ='100%'>
 			@if( count($datos['master']) > 0 )
@@ -69,7 +69,7 @@
                                     <td style = 'text-align:Center;color:#2ABDC4;'>Certificado</td>
                                 </tr>
                             </table>
-                            
+
                         </div>
                         @endif
                         <br><br>
@@ -106,7 +106,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan = '2'style = 'color:#2ABDC4;font-size:11px;'>
-                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Registrate aquí</a>
+                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Participa en este evento haciendo clic acá</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -119,9 +119,9 @@
             </table>
         </div>
         <div class = 'flex-center Ubication2'>
-            
+
         </div>
-        
+
     <script>
         $(document).ready(function () {
 
