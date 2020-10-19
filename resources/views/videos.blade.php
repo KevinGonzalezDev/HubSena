@@ -4,7 +4,7 @@
         <style>
             body{
                 background-image:url('../image/MASTER_BK.png');
-                background-repeat: repeat-y;
+                background-repeat: no-repeat;
                 background-size: cover;
             }
 			video {

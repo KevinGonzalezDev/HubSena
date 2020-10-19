@@ -34,8 +34,14 @@
                             </tr>
                         </table>
                     </div>
+
+                    <script>
+                        alert($d['id']);
+                    </script>
                 </li>
                 @endforeach
             </ul>
         </div>
+
+        
 @endsection

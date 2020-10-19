@@ -55,10 +55,11 @@ ul li {
     padding-right: 10%;
 }
 .Ubication{
-    position:absolute;
-    top:25%;
-    padding-left:5%;
-    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin:15% 0 5% 5%;
 }
 .IconosNormal{
     height: 90px;
@@ -92,6 +93,7 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
 }
 
 
+/*
 .Talleres{
     background: #000000 0% 0% no-repeat padding-box;
     border-radius: 28px;
@@ -101,6 +103,7 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
     padding-top:20px;
     opacity: 0.8;
 }
+*/
 
 .Play{
         position: relative;
@@ -108,6 +111,37 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
     left: -50%;
 }
 
+
+.Talleres ul{
+    padding: 4em;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    width: 60%;
+}
+
+
+.SizeText{
+    text-align: justify;
+}
+
+
+.regresar a{
+    padding: 1em 2em 1em 2em;
+    background-color: #F16A22;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.info-taller{
+    display: block;
+    width: 60%;
+}
+
+.actividades-container span{
+    display: block;
+    margin-bottom: 1em;
+}
 
 @media screen and (max-width:415px){
     .cronograma-container{
