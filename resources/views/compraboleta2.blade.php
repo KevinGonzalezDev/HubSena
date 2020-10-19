@@ -4,12 +4,18 @@
         <style>
             body{
                 background-image:url('../image/MASTER_BK.png');
-                background-repeat: repeat-y;
+                background-repeat: no-repeat;
                 background-size: cover;
             }
         </style>
 
+
+            <div class="regresar">
+                <a onclick="regresar()">< Volver</a>
+            </div>
+
         <div class = ' Ubication'>
+        
             <table width ='100%'>
 			@if( count($datos['master']) > 0 )
 				<tr>
