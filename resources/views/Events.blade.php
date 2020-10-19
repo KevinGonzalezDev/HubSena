@@ -29,7 +29,7 @@
                                     <img src ='image/{{$d->icono}}' class = 'IconosMins'/>
                                 </td>
                                 <td style = 'text-align: center;color:#3D3D3D;'>
-                                    <a href = '{{route('InformacionTipo',['id'=>$d->id])}}'>{{$d->nombre}}</a>
+                                    <a href = '{{route('InformacionTipo',['id'=>$d->id])}}' data-toggle="tooltip" title="{{$d->descripcion}}" >{{$d->nombre}}</a>
                                 </td>
                             </tr>
                         </table>
@@ -43,5 +43,5 @@
             </ul>
         </div>
 
-        
+
 @endsection
