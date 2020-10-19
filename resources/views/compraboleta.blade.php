@@ -13,7 +13,7 @@
             <table width ='100%'>
                 @if( count($datos['master']) > 0 )
 				<tr>
-                    <td style = 'padding-left:4%;'>
+                    <td style="padding-left:4%,text-align:center;width: 700px;">
 						@if($datos['id'] == 1)
 							<p class = 'SizeText'style = 'text-align:justify;'>Es un taller de co-creación en el que por medio de una metodología interactiva teórico práctica, se transmite conocimiento a los asistentes con el fin de brindar las herramientas necesarias para validar ideas de negocio y/o soluciones de mercado con usuarios y clientes reales.</p>
 
@@ -101,7 +101,10 @@
                     <td style = 'padding-left:5%;'>
 					<br>
 					<br>
+					<span class = 'Titulos'>ESTAS SON LAS ACTIVIDADES QUE TENEMOS PARA TI</span>
 					<br>
+					<br>
+					
                         <Div class ='Talleres'>
                             <ul>
                                 @foreach( $datos['info2'] as $d )
