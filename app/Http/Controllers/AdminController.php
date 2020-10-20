@@ -446,7 +446,7 @@ class AdminController extends Controller{
 
     public function Sitex(){
         $da = DB::SELECT("SELECT "
-                . "id, nombre, icono, subtitulo, descripcion,certificado "
+                . "id, nombre, icono, subtitulo, descripcion,color_tema,certificado "
                 . "FROM tipocursos "
                 . "where estado = 1");
         $datos = [
@@ -457,7 +457,7 @@ class AdminController extends Controller{
 
     public function InformacionTipo($id){
         $da = DB::SELECT("SELECT "
-                . "id, nombre, icono, subtitulo, descripcion,certificado "
+                . "id, nombre, icono, subtitulo, descripcion,color_tema,certificado "
                 . "FROM tipocursos "
                 . "where estado = 1 "
                 . "and id = $id");
@@ -475,7 +475,7 @@ class AdminController extends Controller{
     }
 	public function InformacionTipo2($id){
         $da = DB::SELECT("SELECT "
-                . "id, nombre, icono, subtitulo, descripcion,certificado "
+                . "id, nombre, icono, subtitulo, descripcion,color_tema,certificado "
                 . "FROM tipocursos "
                 . "where estado = 1 "
                 . "and id = $id");
