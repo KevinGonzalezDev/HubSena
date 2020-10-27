@@ -116,7 +116,7 @@
 
             <div class="actividades-container">
 
-			    <span class = 'Titulos' style="color:<?php echo $datos['info'][0]->color_tema; ?>">ESTAS SON LAS ACTIVIDADES QUE TENEMOS PARA TI</span>
+			    <span id="tituloActividades" class = 'Titulos' style="color:<?php echo $datos['info'][0]->color_tema; ?>">ESTAS SON LAS ACTIVIDADES QUE TENEMOS PARA TI</span>
 
                     <div class = 'Talleres'>
 

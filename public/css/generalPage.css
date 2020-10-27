@@ -335,12 +335,17 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
         margin: 5em 0 2em 0;
     }
 
+    #tituloActividades{
+        text-align: center;
+        margin: 3rem auto 3rem auto;
+    }
+
     .flex-center{
         justify-content: center;
     }
 
     .Talleres{
-        width: 100%;
+        margin: auto auto 5rem auto;
     }
 
     .videos-container{
