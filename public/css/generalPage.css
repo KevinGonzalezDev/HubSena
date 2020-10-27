@@ -12,17 +12,34 @@ and open the template in the editor.
     src: url("../webfonts/JosefinSans-Bold.ttf");
 }
 
+:root{
+    --main-font-size-main-titles:2rem;
+    --main-font-size-links:1rem;
+    --main-font-size-verysmall-titles:1rem;
+
+
+    --main-videos-width:250px;
+}
+
 
 html, body {
     color: #636b6f;
-    font-family: "Josefin Sans";
+    font-family: "Josefin Sans";    
     src: url("../webfonts/JosefinSans-Bold.ttf");
     font-weight: 200;
     height: 100vh;
     margin: 0;
     font-size:13px;
 }
-a{color:#333333;}
+a{
+    color:#333333;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 ul{
     display: inline-block;
 }
@@ -38,30 +55,28 @@ ul li {
 .flex-center {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .contentopcion{
     padding:10px;
     background-color: white;
     border-radius:0.5em;
+    margin:1em;
+    min-width: 300px;
 }
 
 .IconosMins{
     height: 40px;
 }
-.UbicationCe{
-    position:absolute;
-    top:40%;
-    padding-left:10%;
-    padding-right: 10%;
-}
+
 .Ubication{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    margin:15% 0 5% 5%;
+    margin:5em 0 2em 5em;
 }
 .IconosNormal{
     height: 90px;
@@ -96,7 +111,7 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
 
 
 /*
-.Talleres{
+.Tallez{
     background: #000000 0% 0% no-repeat padding-box;
     border-radius: 28px;
     height: auto;
@@ -107,25 +122,13 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
 }
 */
 
-.Play{
-        position: relative;
-    top: 25%;
-    left: -50%;
-}
-
-
-.Talleres ul{
-    padding: 4em;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 25px;
-    width: 60%;
-}
-
-
 .SizeText{
     text-align: justify;
 }
 
+.regresar{
+    margin: 2em 0 2em 0;
+}
 
 .regresar a{
     padding: 1em 2em 1em 2em;
@@ -144,10 +147,276 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
     margin-bottom: 1em;
 }
 
-@media screen and (max-width:415px){
-    .cronograma-container{
-       margin-top: 15em;
+/* TITULOS */
+
+#main-title{
+    text-align: center;
+    margin-bottom: 2em;
+    color: #000;
+    font-size:var(--main-font-size-main-titles);
+    background-color: #fff;
+    padding: 1em 3em 1em 3em;
+    border-radius: 25px;
+}
+
+/* EVENTS */
+
+.events-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-image: url('../image/FONDO_2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 150px;
+    margin: 2em;
+}
+
+.eventos-buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+
+
+/* CONTENIDOS */
+
+.logo-block{
+    width: 150px;
+    margin: 2em;
+}
+
+.certificado-container{
+    margin: 0 0 2em 0;
+}
+
+.Talleres{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 70%;
+    border-radius: 25px;
+    margin-bottom: 5em;
+}
+
+.Talleres ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.datos-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    margin: 1em;
+}
+
+#title-datos{
+    color: #fff;
+}
+
+.hora-container, .fecha-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.datos-container h3{
+    font-size: var(--main-font-size-verysmall-titles);
+    color: #D38728;
+}
+
+.datos-container p{
+    color: #fff;
+    font-size: var(--main-font-size-verysmall-titles);
+}
+
+.datos-container a{
+    font-size: var(--main-font-size-links);
+}
+
+.datos-container{
+    width: 190px;
+} 
+
+.disponible{
+    color:#2ABDC4;
+}
+
+.no-disponible{
+    color:#d14221 !important;
+}
+
+
+/* ESTILOS DE LOS VIDEOS ESTILOS DE LOS VIDEOS ESTILOS DE LOS VIDEOS */
+
+.videos-container{
+    margin: 3rem 0 3rem 0;
+    width: 65%;
+}
+
+.videos-container ul{
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.videos-container ul li{
+    width: var(--main-videos-width);
+    margin: 2rem 0 2rem 0;
+}
+
+.img-container-videos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-videos{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.Play{
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* ESTILOS DE LOS VIDEOS ESTILOS DE LOS VIDEOS ESTILOS DE LOS VIDEOS END!!!!!*/
+
+
+/* RESPONSIVE */
+
+
+/*EVENTOS -------------------------------------------------------------------------------------*/
+@media screen and (max-width:1280px){
+    .eventos-buttons-container{
+        width: 80%;
     }
+
+    .videos-container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    #main-title{
+        margin: 5em 0 2em 0;
+    }
+
+    #tituloActividades{
+        text-align: center;
+        margin: 3rem auto 3rem auto;
+    }
+
+    .flex-center{
+        justify-content: center;
+    }
+
+    .Talleres{
+        margin: auto auto 5rem auto;
+    }
+
+    .videos-container{
+        width: 90%;
+        margin: auto;
+    }
+
+    .Ubication{
+        margin: auto;
+        width: 90%;
+    }
+
+    .info-taller{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width:500px){
+    :root{
+        --main-font-size-main-titles:1.5rem;
+    }
+
+    .videos-container ul{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main-title{
+        margin:8em 0 2em 0;
+        padding: 1em 1.5em 1em 1.5em;
+        width: 100%;
+    }
+
+    .logo{
+        margin: 2rem auto 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .UbicationCe{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .events-main-container{
+        padding-bottom: 2em;
+    }
+
+    .Talleres ul{
+        justify-content: center;
+    }
+
+    .videos-container ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videos-container ul li{
+        margin-bottom: 4em;
+    }
+
+    .cronograma-container{
+        margin-top: 2rem;
+    }
+    
+}
+
+@media screen and (max-width:415px){
 
 }
 
@@ -156,3 +425,11 @@ box-shadow: 10px 10px 25px -5px rgba(112,112,112,1);
         margin-top: 5em;
      }
 }
+
+@media screen and (max-width:320px){
+    .eventos-buttons-container{
+        width: 90%;
+    }
+}
+
+/*EVENTOS ------------------------------------------------------------------------------------- END!!!!*/ 
