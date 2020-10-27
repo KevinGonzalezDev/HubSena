@@ -30,9 +30,6 @@
         <?php echo '<script type="text/javascript" src = "js/bootstrap-datepicker.js?v='.date("Y-m-d H:i:s").'"></script>';?>
         <?php echo '<script type="text/javascript" src = "js/jquery.creditCardValidator.js?v='.date("Y-m-d H:i:s").'"></script>';?>
 
-        <style>
-
-        </style>
     </head>
     <body>
         {{ csrf_field() }}

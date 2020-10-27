@@ -4,10 +4,13 @@
         <style>
             body{
                 background-image:url('../image/MASTER_BK.png');
-                background-repeat: no-repeat;
+                background-repeat: repeat-y;
                 background-size: cover;
             }
         </style>
+
+            
+        <img class = 'logo-block' src ='../image/logo.png' />
 
         <div class = ' Ubication'>
 
@@ -88,25 +91,17 @@
             <div class="videos-container">
                 <ul>
 					@foreach( $datos['master'] as $d)
-							<li style = 'text-align:center;'>
-                                <table width = '100%'>
-									<tr>
-										<td >
-											<a href = "{{ route('Videos',['id'=>$d->id]) }}" target = '_blank' >
-												<img src ='../image/{{$d->imagen}}' class = 'IconosNormal Sombra' />
-												<img src ='../image/play.png' class = 'Play'/>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<br><span>{{$d->nombre}}</span>
-										</td>
-									</tr>
-								</table>
+							<li>
+								<a href = "{{ route('Videos',['id'=>$d->id]) }}" target = '_blank' >
+									<img src ='../image/{{$d->imagen}}' class = 'Sombra' />
+									<img src ='../image/play.png' class = 'Play'/>
+								</a>
+										
+								<br><span>{{$d->nombre}}</span>
                             </li>
-				@endforeach
+				    @endforeach
 				</ul>
+
             </div>
 			@endif
 
@@ -122,58 +117,37 @@
                     <ul>
 
                         @foreach( $datos['info2'] as $d )
-                            <li style = 'width:300px;'>
+                            <li class="datos-container">
                                         @if( $datos['id'] == 6 )
-										<table width ='100%'>
-                                            <tr>
-                                                <td colspan = '2'style = 'color:white;'>
-                                                    {{$d->nombre}}
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan = '2'style = 'color:#2ABDC4;font-size:11px;'>
-                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Ingresa aquí</a>
-                                                </td>
-                                            </tr>
-                                        </table>
+
+                                            <p>{{$d->nombre}}</p>
+                                                
+                                            <a class="disponible" href = '{{$d->link}}' target = '_blank'>Ingresa aquí</a>
 										@else
-										<table width ='100%'>
-                                            <tr>
-                                                <td colspan = '2'style = 'color:white;'>
-                                                    {{$d->nombre}}
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style = 'color:#FCB51A;font-size:11px;'>
-                                                    Fecha:
-                                                </td>
-                                                <td style = 'color:white;font-size:11px;'>
-                                                    {{$d->fechas}}
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style = 'color:#FCB51A;font-size:11px;'>
-                                                    Hora:
-                                                </td>
-                                                <td style = 'color:white;font-size:11px;'>
-                                                    {{$d->horario}}
-                                                </td>
-                                            </tr>
+
+                                                <h3 id="title-datos">{{$d->nombre}}</h3>
+
+
+                                                    <div class="fecha-container">
+                                                        <h3>Fecha:</h3>
+                                                        <p>{{$d->fechas}}</p>
+                                                    </div>
+
+                                                    <div class="hora-container">
+                                                        <h3>Hora:</h3>
+                                                        <p>{{$d->horario}}</p>
+                                                    </div>
 
                                             @if( $d->fecha_cierre < date("Y-m-d") )
-                                            <tr>
-                                                <td colspan = '2'style = 'color:#d14221;font-size:11px;'>
-                                                    <a style = 'color:#d14221;font-size:11px;' target = '_blank'>Este evento ya no esta disponible</a>
-                                                </td>
-                                            </tr>
+
+                                                    <a class="no-disponible" target = '_blank'>Este evento ya no esta disponible</a>
+
                                             @else
-                                            <tr>
-                                                <td colspan = '2'style = 'color:#2ABDC4;font-size:11px;'>
-                                                    <a href = '{{$d->link}}' style = 'color:#2ABDC4;font-size:11px;' target = '_blank'>Participa en este evento haciendo clic acá</a>
-                                                </td>
-                                            </tr>
+
+                                                    <a class="disponible" href = '{{$d->link}}' target = '_blank'>Participa en este evento haciendo clic acá</a>
+
                                             @endif
-                                        </table>
+
 										@endif
                             </li>
                             @endforeach
@@ -184,10 +158,6 @@
 
             </div>
 
-
-        <div class = 'flex-center Ubication2'>
-
-        </div>
 
     <script>
         $(document).ready(function () {
