@@ -93,8 +93,14 @@
 					@foreach( $datos['master'] as $d)
 							<li>
 								<a href = "{{ route('Videos',['id'=>$d->id]) }}" target = '_blank' >
-									<img src ='../image/{{$d->imagen}}' class = 'Sombra' />
-									<img src ='../image/play.png' class = 'Play'/>
+                                    
+                                    <div class="img-container-videos">
+
+                                        <img src ='../image/{{$d->imagen}}' class = 'img-videos Sombra' />
+                                        <img src ='../image/play.png' class = 'Play'/>
+
+                                    </div>
+									
 								</a>
 										
 								<br><span>{{$d->nombre}}</span>
