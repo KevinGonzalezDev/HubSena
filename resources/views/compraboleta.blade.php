@@ -9,7 +9,7 @@
             }
         </style>
 
-            
+
         <img class = 'logo-block' src ='../image/logo.png' />
 
         <div class = ' Ubication'>
@@ -93,16 +93,16 @@
 					@foreach( $datos['master'] as $d)
 							<li>
 								<a href = "{{ route('Videos',['id'=>$d->id]) }}" target = '_blank' >
-                                    
+
                                     <div class="img-container-videos">
 
                                         <img src ='../image/{{$d->imagen}}' class = 'img-videos Sombra' />
                                         <img src ='../image/play.png' class = 'Play'/>
 
                                     </div>
-									
+
 								</a>
-										
+
 								<br><span>{{$d->nombre}}</span>
                             </li>
 				    @endforeach
@@ -111,6 +111,31 @@
             </div>
 			@endif
 
+      @if( count($datos['pdfmaster']) > 0 )
+
+      <span class = 'Titulos' style="color:<?php echo $datos['info'][0]->color_tema; ?>" >PRESENTACIONES</span>
+
+      <div class="videos-container">
+        <ul>
+      @foreach( $datos['pdfmaster'] as $d)
+      <li>
+      <a href="{{$d->url}}" onclick="window.open('{{$d->url}}',
+                                         'newwindow',
+                                         'width=900,height=7000');
+              return false;">
+              <div class="img-container-videos">
+
+                  <img src ='../image/{{$d->imagen}}' class = 'img-videos Sombra' />
+
+              </div>
+              <br><span>{{$d->nombre}}</span>
+
+      </a>
+      </li>
+      @endforeach
+        </ul>
+      </div>
+      @endif
 
 <!--   ACTIVIDADES ---------------------------------  -->
 
@@ -127,7 +152,7 @@
                                         @if( $datos['id'] == 6 )
 
                                             <p>{{$d->nombre}}</p>
-                                                
+
                                             <a class="disponible" href = '{{$d->link}}' target = '_blank'>Ingresa aquí</a>
 										@else
 
