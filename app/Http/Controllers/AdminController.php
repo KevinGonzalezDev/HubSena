@@ -465,11 +465,13 @@ class AdminController extends Controller{
                 . "id, nombre, fechas, horario, link, plataforma , fecha_cierre "
                 . "from detalle_talleres where idtaller = $id order by orden");
 		$master = DB::SELECT("SELECT * from videosmaster where idcurso = $id");
+    $pdfmaster = DB::SELECT("SELECT * from pdfmaster where idcurso = $id");
         $datos = [
             'info'=>$da,
             'info2'=>$s,
             'id'=>$id,
-            'master'=>$master
+            'master'=>$master,
+            'pdfmaster'=>$pdfmaster
         ];
         return view('compraboleta')->with('datos',$datos);
     }
@@ -483,10 +485,12 @@ class AdminController extends Controller{
                 . "id, nombre, fechas, horario, link, plataforma, fecha_cierre "
                 . "from detalle_talleres where idtaller = $id");
 		$master = DB::SELECT("SELECT * from videosmaster where idcurso = $id");
+    $pdfmaster = DB::SELECT("SELECT * from pdfmaster where idcurso = $id");
         $datos = [
             'info'=>$da,
             'info2'=>$s,
-            'master'=>$master
+            'master'=>$master,
+            'pdfmaster'=>$pdfmaster
         ];
         return view('videos')->with('datos',$datos);
     }

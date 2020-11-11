@@ -21,4 +21,3 @@ Route::GET('PayU', 'AdminController@PayU')->name('PayU');
 Route::get('InformacionTipo/{id}', 'AdminController@InformacionTipo')->name('InformacionTipo');
 Route::get('InformacionTipo2/{id}', 'AdminController@InformacionTipo2')->name('InformacionTipo2');
 Route::get('Videos/{id}', 'AdminController@Videos')->name('Videos');
-Route::POST('webhook', 'AdminController@handle');
