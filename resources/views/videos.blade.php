@@ -12,23 +12,25 @@
 				border-radius: 0.2em;
 			}
         </style>
-        
+
         <div class = ' Ubication' style = 'top:'>
             <table width ='100%'>
 				<tr>
                     <td style = 'padding-left:5%;'>
 					@foreach( $datos['master'] as $d)
-                        <video src="{{$d->url}}" width="70%"  controls></video>
+                        <iframe width="1220" height="686"
+                          src="{{$d->youtubeurl}}">
+                        </iframe>
 					@endforeach
                     </td>
                 </tr>
             </table>
-            
+
         </div>
         <div class = 'flex-center Ubication2'>
-            
+
         </div>
-        
+
     <script>
         $(document).ready(function () {
 
