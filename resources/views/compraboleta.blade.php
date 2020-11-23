@@ -91,6 +91,7 @@
             <div class="videos-container">
                 <ul>
 					@foreach( $datos['master'] as $d)
+          @if( $d->fecha_habiltado < date("Y-m-d H:i:s") )
 							<li>
 								<a href = "{{ route('Videos',['id'=>$d->id]) }}" target = '_blank' >
 
@@ -105,6 +106,7 @@
 
 								<br><span>{{$d->nombre}}</span>
                             </li>
+            @endif
 				    @endforeach
 				</ul>
 
